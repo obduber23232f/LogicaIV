@@ -47,23 +47,29 @@ funcion valor_valido<- func_validar_entero(mensaje)
 			
 			si  no caracterEsNumero
 				caracterEsSimbolo= func_validar_simbolo(carac_i)
-				si caracterEsSimboloacum_simb=acum_simb+1
+				si caracterEsSimbolo
+					acum_simb=acum_simb+1
 				FinSi
-				i=i+1
 				finsi
-			mientras Que (acum_simb > 1 o i <= long_cadena)
+				i=i+1
+			hasta Que (acum_simb > 1 o i > long_cadena)
 			si acum_simb>1
 				mostrar "Hay mas de un punto en la cadena de caracteres"
 				valor_valido=falso
 			FinSi
 			si acum_simb<=1 y i=long_cadena
-				
-			FinSi
-	Hasta Que i> long_cadena
+				valor_valido=Verdadero
+		finsi
+		
+	Hasta Que i > long_cadena
 FinFuncion
-
-
 
 Algoritmo sin_titulo
 	definir valor_valido Como Logico
+	mensaje="Ingrese un numero real"
+	val_valido= func_validar_entero(mensaje)
+	si no val_valido
+		mostrar "El numero ingresado es incorrecto"
+	FinSi
+	
 FinAlgoritmo
