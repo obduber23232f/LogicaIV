@@ -15,5 +15,5 @@ Algoritmo sin_titulo
 				cant_aprob=cant_aprob+1
 			FinSi
 			FinPara
-	FinPara
+		FinPara
 FinAlgoritmo
